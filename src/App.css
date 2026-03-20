@@ -1,4 +1,101 @@
+.app-background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  padding-top: 1px;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+}
+
+/* Fade Transition Logic */
+.content-wrapper {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.default-bg {
+  background-image: url('./Night.png');
+}
+
+.dawn-bg {
+  background-image: url('./Dawn.png');
+}
+
+.morning-bg {
+  background-image: url('./Morning.png');
+}
+
+.night-bg {
+  background-image: url('./Night.png');
+}
+
 .container {
   max-width: 1080px;
   margin: 20px auto;
+}
+
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  height: 110px;
+  justify-content: space-between;
+}
+
+.welcome-text h1 {
+  margin: 0;
+  font-size: 48px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.welcome-subtext {
+  margin: 0;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.welcome-link {
+  color: #8ab4f8;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+}
+
+.welcome-divider {
+  width: 2px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 40px;
+}
+
+.welcome-icon {
+  width: 150px;
 }
