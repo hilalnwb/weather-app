@@ -4,18 +4,16 @@ const CurrentWeather = ({ data }) => {
   return (
     <div className="weather">
       <div className="top">
-        <div>
+        <div className="location-info">
           <p className="city">{data.city}</p>
+          <p className="country">{data.country}</p>
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
       </div>
       <div className="bottom">
         <img alt="weather" className="weather-icon" src={`icons/${data.weather[0].icon}.png`} />
-
         <div className="divider"></div>
-
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
-
         <div className="details">
           <div className="parameter-row">
             <span className="parameter-label top">Details</span>

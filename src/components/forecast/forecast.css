@@ -14,6 +14,13 @@
   font-size: 16px;
   padding: 5px 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.2s ease-in-out;
+}
+
+.daily-item:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.02);
 }
 
 .icon-small {
@@ -56,6 +63,7 @@
   backdrop-filter: blur(8px);
   border-radius: 15px;
   margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .daily-details-grid-item {
@@ -71,4 +79,34 @@
 
 .daily-details-grid-item label:last-child {
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .daily-item {
+    height: 40px; 
+    padding: 5px 10px;
+    margin: 8px 0;
+  }
+  
+  .icon-small {
+    width: 30px; 
+  }
+  
+  .daily-item .day {
+    margin-left: 5px;
+  }
+  
+  .daily-item .day, .description, .min-max {
+    font-size: 12px; 
+  }
+  
+  .daily-details-grid {
+    grid-template-columns: auto; 
+    padding: 10px;
+  }
+  
+  .daily-details-grid-item label:first-child,
+  .daily-details-grid-item label:last-child {
+    font-size: 12px;
+  }
 }

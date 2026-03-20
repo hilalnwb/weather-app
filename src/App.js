@@ -13,7 +13,10 @@ function App() {
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
     
-    // Trigger fade-out animation
+    const labelParts = searchData.label.split(",");
+    const cityName = labelParts[0].trim();
+    const countryName = labelParts[1] ? labelParts[1].trim() : "";
+
     setIsFetching(true);
 
     const currentWeatherFetch = fetch(
@@ -28,11 +31,14 @@ function App() {
         const weatherResponse = await response[0].json();
         const forecastResponse = await response[1].json();
 
-        // Wait 300ms for the screen to go transparent before swapping data
         setTimeout(() => {
-          setCurrentWeather({ city: searchData.label, ...weatherResponse });
-          setForecast({ city: searchData.label, ...forecastResponse });
-          setIsFetching(false); // Trigger fade-in
+          setCurrentWeather({ 
+            city: cityName, 
+            country: countryName, 
+            ...weatherResponse 
+          });
+          setForecast({ city: cityName, ...forecastResponse });
+          setIsFetching(false); 
         }, 300);
       })
       .catch((err) => {
@@ -64,7 +70,6 @@ function App() {
       <div className="container">
         <Search onSearchChange={handleOnSearchChange} />
 
-        {/* Content wrapper handles the opacity transition */}
         <div className={`content-wrapper ${isFetching ? "fade-out" : "fade-in"}`}>
           {currentWeather ? (
             <>
@@ -80,9 +85,7 @@ function App() {
                   github.com/hilalnwb
                 </a>
               </div>
-
               <div className="welcome-divider"></div>
-
               <img src="icons/02n.png" alt="moon cloud icon" className="welcome-icon" />
             </div>
           )}
