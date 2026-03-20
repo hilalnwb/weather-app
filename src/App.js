@@ -12,7 +12,7 @@ function App() {
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
-    
+
     const labelParts = searchData.label.split(",");
     const cityName = labelParts[0].trim();
     const countryName = labelParts[1] ? labelParts[1].trim() : "";
@@ -32,13 +32,13 @@ function App() {
         const forecastResponse = await response[1].json();
 
         setTimeout(() => {
-          setCurrentWeather({ 
-            city: cityName, 
-            country: countryName, 
-            ...weatherResponse 
+          setCurrentWeather({
+            city: cityName,
+            country: countryName,
+            ...weatherResponse
           });
           setForecast({ city: cityName, ...forecastResponse });
-          setIsFetching(false); 
+          setIsFetching(false);
         }, 300);
       })
       .catch((err) => {

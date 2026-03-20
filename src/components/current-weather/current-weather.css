@@ -24,7 +24,7 @@
 .location-info {
   display: flex;
   flex-direction: column;
-  gap: 8px; 
+  gap: 8px;
 }
 
 .bottom {
@@ -57,7 +57,7 @@
 }
 
 .weather-icon {
-  width: 120px; 
+  width: 120px;
   margin: 0;
 }
 
@@ -109,8 +109,8 @@
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 5px;
-  display: block; 
-  text-align: left; 
+  display: block;
+  text-align: left;
 }
 
 /* --- phone stuff --- */
@@ -118,11 +118,11 @@
 @media (max-width: 600px) {
   .weather {
     flex-direction: column;
-    padding: 20px 15px; 
-    margin: 15px auto 20px auto; 
+    padding: 20px 15px;
+    margin: 15px auto 20px auto;
     gap: 15px;
   }
-  
+
   .top {
     align-items: center;
     text-align: center;
@@ -134,57 +134,58 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 5px; 
+    gap: 5px;
   }
 
   .city {
-    font-size: 28px; 
+    font-size: 28px;
     line-height: 1.1;
-    margin: 0; 
+    margin: 0;
   }
 
   .country {
     font-size: 18px;
-    margin: 0; 
+    margin: 0;
   }
 
   .weather-description {
     font-size: 18px;
-    margin: 0; 
+    margin: 0;
   }
-  
+
   .weather-icon {
-    width: 110px; 
+    width: 110px;
     margin: 5px 0;
   }
-  
+
   .bottom {
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
     width: 100%;
   }
-  
+
   .divider {
-    display: none; 
+    display: none;
   }
-  
+
   .temperature {
-    font-size: 60px; 
+    font-size: 60px;
     margin: 5px 0;
     margin-right: 0;
   }
-  
+
   .details {
     width: 100%;
-    max-width: 300px; 
+    max-width: 300px;
     margin: 0 auto;
   }
 
   .parameter-row {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
-  
-  .parameter-label, .parameter-value {
-    font-size: 14px; 
+
+  .parameter-label,
+  .parameter-value {
+    font-size: 14px;
   }
 }

@@ -109,9 +109,17 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* --- phone stuff --- */
@@ -121,10 +129,10 @@
     flex-direction: column;
     margin-top: 60px;
     padding: 50px 20px;
-    gap: 35px; 
+    gap: 35px;
     width: 95%;
   }
-  
+
   .welcome-text {
     text-align: center;
     height: auto;
@@ -132,7 +140,7 @@
   }
 
   .welcome-text h1 {
-    font-size: 44px; 
+    font-size: 44px;
     line-height: 1.1;
   }
 
@@ -147,7 +155,7 @@
   }
 
   .welcome-icon {
-    width: 200px; 
+    width: 200px;
     margin: 0 auto;
     filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
   }
